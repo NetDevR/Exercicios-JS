@@ -8,11 +8,11 @@ function contar(){
         window.alert('ERRO! Dados estão comprometidos')
     } else{
         res.innerHTML = ('Contando: ')
-        let inicio_num = Number(inicio.value)
-        let fim_num = Number(fim.value)
-        let passsos_num = Number(passos.value)
+        let i = Number(inicio.value)
+        let f = Number(fim.value)
+        let p = Number(passos.value)
 
-        for(var c = 1; c <= fim_num ; c += p){
+        for( let c = 1; c <= f; c += p){
             res.innerHTML += `${c} `
         }
 
