@@ -1,19 +1,33 @@
-function tabuada(){
-    let num = document.getElementById('numero')
-    let tab = document.getElementById('selecao')
+let num = document.getElementById('numero')
+let lista = document.getElementById('flista')
+let res = document.querySelector('div#res')
+let valores = []
 
-    if(num.value.length == 0){
-        window.alert('Erro! Número inválido para tabuada')
+function isNumero(n){
+    if (Number(n) >= 1 && Number(n) <= 100){
+        return true
+    } else{
+        return false
+    }
+
+}
+
+
+function inLista(n, l){
+    if (l.indexOf(Number(n)) != -1){
+        return true
+    } else{
+        return false
+    }
+
+
+}
+
+function adicionar(){
+    if(isNumero(num.value) && !inLista(num.value, valores)){
+        window.alert('Td ok!')
+
     }else{
-        let n = Number(num.value)
-        let c = 1
-        tab.innerHTML = ''
-        while (c <= 10){
-            let item = document.createElement('option')
-            item.text = `${n} x ${c} = ${n*c}`
-            item.value = `tab${c}`
-            tab.appendChild(item)
-            c++;
-        }
+        window.alert('Valor inválido ou já encontrado na lista')
     }
 }
