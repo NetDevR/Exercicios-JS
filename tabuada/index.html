@@ -5,27 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Comprovante de idades</title>
+    <title>Tabuada</title>
 </head>
 <body>
 
-  <header> <h2>contador</h2></header>
+  <header> <h2>Tabuada</h2></header>
 
   <section>
       <div>
-        <p> Início <input type="number" name="txtinicio" id="txtinicio" min="0"></p>
-
-        <p>Final <input type="number" name="txtfinal" id="txtfinal" min="0"></p>
-
-        <p>Passos <input type="number" name="txtpassos" id="txtpassos" min="0"></p>
-
-        <p>
-          <input type="button" value="Verificar" onclick="contar()">
-        </p>
+        <p> Digite um número <input type="number" name="numero" id="numero" min="0">
+        <input type="button" value="Gerar tabuada" onclick="tabuada()">
+      </p>
       </div>
 
       <div id="res">
-        Preencha os dados acima para ver o resultado
+        <select name="selecao" id="selecao" size="10">
+          <option value="txt"> Digite um número acima</option>
+
+        </select>
       </div>
 
 

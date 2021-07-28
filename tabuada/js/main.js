@@ -1,35 +1,19 @@
-function contar(){
-    var inicio = document.getElementById('txtinicio')
-    var fim = document.getElementById('txtfinal')
-    var passos = document.getElementById('txtpassos')
-    var res = document.getElementById('res')
+function tabuada(){
+    let num = document.getElementById('numero')
+    let tab = document.getElementById('selecao')
 
-    if(inicio.value.length == 0 || fim.value.length == 0 || passos.value.length == 0){
-        window.alert('ERRO! Dados estão comprometidos')
-        res.innerHTML('Impossivel contar')
-    } else{
-        res.innerHTML = ('Contando: <br>')
-        let i = Number(inicio.value)
-        let f = Number(fim.value)
-        let p = Number(passos.value)
-        if (p <= 0){
-            window.alert('Passo inválido. Considerando passo 1')
-            p = 1
+    if(num.value.length == 0){
+        window.alert('Erro! Número inválido para tabuada')
+    }else{
+        let n = Number(num.value)
+        let c = 1
+        tab.innerHTML = ''
+        while (c <= 10){
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            item.value = `tab${c}`
+            tab.appendChild(item)
+            c++;
         }
-        if(i < f){
-            //Contagem Crescente
-            for( let c = 1; c <= f; c += p){
-                res.innerHTML += `${c} \u{1F449}`
-            } 
-        }else{
-            //Contagem Decrescente
-            for( let c = i; c >= f; c -= p){
-                res.innerHTML += `${c} \u{1F449}`
-            }
-            
-
-        }
-        res.innerHTML += `\u{1F6A9}`
-
     }
 }
