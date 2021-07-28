@@ -9,22 +9,18 @@
 </head>
 <body>
 
-  <header> <h2>Verificador de Idades</h2></header>
+  <header> <h2>contador</h2></header>
 
   <section>
       <div>
-        <p> Ano de Nascimento 
-          <input type="number" name="txtano" id="txtano" min="0">
-        </p>
-        <p>Sexo:
-          <input type="radio" name="radsex" id="mas" checked>
-          <label for="mas">Masculino</label>
-          <input type="radio" name="radsex" id="fem" checked>
-          <label for="fem">Feminino</label>
+        <p> Início <input type="number" name="txtinicio" id="txtinicio" min="0"></p>
 
-        </p>
+        <p>Final <input type="number" name="txtfinal" id="txtfinal" min="0"></p>
+
+        <p>Passos <input type="number" name="txtpassos" id="txtpassos" min="0"></p>
+
         <p>
-          <input type="button" value="Verificar" onclick="verificar()">
+          <input type="button" value="Verificar" onclick="contar()">
         </p>
       </div>
 
@@ -38,7 +34,7 @@
     
 
   <footer>
-      <p>Developed by NetDevR</p>
+      <p> &copy; Developed by NetDevR</p>
 
   </footer>
 
